@@ -35,6 +35,10 @@
   transition: all 0.3s ease-in-out;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: var(--body_background);
