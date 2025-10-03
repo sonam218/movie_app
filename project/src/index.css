@@ -1,12 +1,44 @@
+:root{
+  --body_background: #101010;
+  --text_color: #fff;
+  --nav_background: #1a1a1a;
+  --card_background: #1a1a1a;
+  --card_shadow: rgba(0, 0, 0, 0.5);
+  --button_background: #333;
+  --button_hover: #555;
+  --input_background: #333;
+  --input_placeholder: #aaa;
+  --input_text: #fff;
+  --body_color: #fff;
+  --heading_color: #ffe400;
+}
+
+[data-theme="light"]{
+  --body_background: #f4f4f4;
+  --text_color: #000;
+  --nav_background: #fff;
+  --card_background: #fff;
+  --card_shadow: rgba(0, 0, 0, 0.1);
+  --button_background: #ddd;
+  --button_hover: #bbb;
+  --input_background: #eee;
+  --input_placeholder: #555;
+  --input_text: #000;
+  --body_color: #000;
+  --heading_color: #ff8c00;
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
 }
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #101010;
-  color: #fff;
+  background-color: var(--body_background);
+  color: var(--body_color);
 }
 
 .align-center {

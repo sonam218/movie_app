@@ -18,9 +18,9 @@ const MovieList = () => {
     }, []);
 
     useEffect(() => {
-        let sortedMovies = [...filterMovies];
+        // let sortedMovies = [...filterMovies];
         if (sort.by !== 'default') {
-            const sortedMovies = _.orderBy(sortedMovies, [sort.by], [sort.order]);
+            const sortedMovies = _.orderBy(filterMovies, [sort.by], [sort.order]);
             setfilterMovies(sortedMovies);
         }
     }, [sort]);
@@ -39,6 +39,7 @@ const MovieList = () => {
     const handleSort = (e) => {
         const {name, value} = e.target;
         setSort((prev)=>({...prev, [name]: value}));
+
     }
     
     const fetchMovies = async () => {
